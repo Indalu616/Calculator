@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+        .container .calculator{
+            margin: 20px auto;
+            padding: 10px;
+            display: flex;
+
+            width: 14%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color:black;
+            flex-wrap: wrap;
+            border: 2px solid green;
+            border-radius: 10px;
+            box-shadow: 5px 5px 4px rgb(1, 254, 73), -5px -5px 4px rgb(1, 251, 97);
+        }
+        .calculator form .display{
+           background-color: rgb(244, 222, 222);
+           border: none;
+           outline: 0;
+           border-radius: 20px;
+           height: 60px;
+           text-align: right;
+
+
+        }
+        #field{
+            background-color: #f5f5f5;
+            border: none;
+            padding-right: 6px;
+            border-radius: 10px;
+            height: 60px;
+            text-align: right;
+            outline: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 17px;
+            
+        }
+
+        
+        .calculator form .display:focus{
+            background-color: white;
+            outline: 0;
+
+        }
+        .btn{
+            width: 40px;
+            height: 40px;
+            margin-top:10px;
+            border: none;
+            border-radius: 20px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn-o{
+            width: 40px;
+            height: 40px;
+            margin-top:10px;
+            border: none;
+            border-radius: 20px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+
+        }
+        .calculator  span h3{
+            color: white;
+            font-weight: bold;
+        }
+        .calculator  .title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            height: 30px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        p small{
+            color:white;
+        }
+        p{
+            text-align: center;
+        }
+        #dev{
+            border-bottom: 2px solid red;
+        }
+        @media(max-width:675px){
+            .container .calculator{
+                margin: 30px auto;
+                margin-top: 50px;
+
+                width: 70%;
+
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="calculator">
+        <span class="title">
+            <h3>BASIC</h3>
+        </span>
+        
+        <form class="display">
+            <input type="text" name="display" id="field" placeholder="0" readonly>
+        </form>
+        <form>
+            <input type="button" class="btn" onclick="field.value +='9'" value="9">
+            <input type="button" class="btn" onclick="field.value +='8'" value="8">
+            <input type="button" class="btn" onclick="field.value +='7'" value="7">
+            <input type="button" class="btn-o" onclick="field.value +='+'" value="+">
+        </form>
+        <form>
+            <input type="button" class="btn" onclick="field.value +='6'" value="6">
+            <input type="button" class="btn" onclick="field.value +='5'" value="5">
+            <input type="button" class="btn" onclick="field.value +='4'" value="4">
+            <input type="button" class="btn-o" onclick="field.value +='-'" value="-">
+        </form>
+       <form>
+
+        <input type="button" class="btn" onclick="field.value +='3'" value="3">
+        <input type="button" class="btn" onclick="field.value +='2'" value="2">
+        <input type="button" class="btn" onclick="field.value +='1'" value="1">
+        <input type="button" class="btn-o" onclick="field.value +='*'" value="*">
+       </form>
+        <form>
+            <input type="button" class="btn" onclick="field.value +='0'" value="0">
+            <input type="button" class="btn" onclick="field.value +='00'" value="00">
+            <input type="button" class="btn" onclick="field.value +='.'" value=".">
+            <input type="button" class="btn-o" onclick="field.value=eval(field.value)" value="=">
+        </form>
+            
+        <form>
+            <input type="button" class="btn" onclick="field.value +='/100'" value="%">
+            <input type="button" class="btn" onclick="field.value =''" value="AC">
+            <input type="button" class="btn" onclick="field.value =field.value.toString().slice(0,-1)" value="DEL">
+            <input type="button" class="btn-o" onclick="field.value +='/'" value="/">
+
+        </form>
+        <p><small><span id="dev">Developed by:</span> Indalu Kelbesa</small></p>
+        
+    </div>
+</div>
+
+</body>
+</html>
