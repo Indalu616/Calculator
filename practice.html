@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .navs{
+            display: flex;
+            background-color: black;
+            color: white;
+            justify-content: center;
+           
+        }
+        .links{
+            display: flex;
+            font-size: 20px;
+            list-style: none;
+            flex-grow: 1;
+          
+        }
+        .logo{
+            padding-left: 30px;
+            flex-grow:2;
+        }
+        .links li a{
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            transition: font-size 0.5;
+        }
+        .links li a:hover{
+            background-color: rgb(238, 80, 80);
+            border-radius: 10px;
+            font-size: 20px ;
+        }
+        main{
+            display: flex;
+            margin-top: 100px;
+            flex-direction: column;
+            align-items: center;
+        }
+        main h2{
+            text-transform: uppercase;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+        .image img{
+            border-radius: 20px;
+            width: 100%;
+        }
+        .about{
+            display: flex;
+            padding: 20px;
+        }
+        .about img{
+            width: 500px;
+            border-radius: 10px;
+        }
+        .about .descriptions{
+            background-color: #fafafa;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            
+        }
+        footer{
+            display: flex;
+            background-color: black;
+            color: white;
+        }
+        .quick-links{
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            flex-grow: 1;
+            
+            
+
+        }
+        .quick-links a{
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px;
+            color: white;
+
+        }
+        .staffs{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            flex-grow: 2;
+            padding: 20px;
+
+        }
+        .staffs ul{
+            list-style: none;
+        }
+    .staffs ul li{
+        padding: 8px;
+    }
+    .quick-links a:hover{
+      background-color: red;
+      border-radius: 20px;
+    }
+    .top-navs{
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: rgb(167, 12, 12);
+            color: white;
+    }
+    @media(max-width:675px){
+        main{
+            margin-top: 470px;
+        }
+        .navs{
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            color: white;
+            justify-content: center;
+
+    }
+    .links{
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            list-style: none;
+            flex-grow: 1;
+
+}
+.links li{
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            transition: font-size 0.5;
+
+}
+.about{
+    flex-direction: column;
+} 
+.image img{
+            border-radius: 20px;
+            width: 300px;
+
+}
+.about img{
+            width: 300px;
+            border-radius: 10px;
+}
+.logo{margin-top: 20px;
+            padding-left: 30px;
+            flex-grow:2;
+            text-align: center;
+            border-bottom: 4px solid rgb(237, 90, 90);
+}
+}
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="top-navs">
+        <nav class="navs">
+            <div class="logo">
+                <h1>ADDIS CODER</h1>
+    
+            </div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Alumni</a></li>
+                <li><a href="#">Apply</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Staff</a></li>
+    
+            </ul>
+                
+    
+          
+    
+        </nav>
+    </div>
+    
+    <main>
+        <h2>Three years coders</h2>
+      <div class="image">
+        <img src="Coders.jpg">
+
+      </div>
+      <div class="about">
+        <img src="Coder_class.jpg">
+        <div class="descriptions">
+            <p>AddisCoder is a free intensive 4-week summer program in Addis Ababa, Ethiopia introducing high schoolers to programming and algorithms. The program ran previously in 2011, 2016, 2018, 2019, and 2023. The next offering of AddisCoder will be July 14 to August 9, 2024.</p>
+            <p>AddisCoder students are current high schoolers who come from all across Ethiopia for 4 weeks to take the course in Ethiopia’s capital city, Addis Ababa. In 2011 in the first edition of the course, students registered themselves for the course via e-mail. Since 2016, the program has grown much larger into a collaborative effort between AddisCoder Inc. and the Meles Zenawi Foundation, attracting top students from all regions of Ethiopia with help from the Ministry of Education.</p>
+        </div>
+
+        
+      </div>
+    </main>
+    <footer>
+        <div class="quick-links">
+            <h2>Quick-links</h2>
+            <a href="#">Facebook</a>
+            <a href="#">Youtube</a>
+            <a href="#">Instagram</a>
+
+        </div>
+        <div class="staffs">
+            <h2>Staff Members</h2>
+            <ul>
+                <li>Prof. Jelani Nelson</li>
+                <li> Prof. Boaz Barak</li>
+                <li> Dr. Timnit Gebru</li>
+                <li>Daniel Kang</li>
+            </ul>
+
+        </div>
+    </footer>
+    
+</body>
+</html>
